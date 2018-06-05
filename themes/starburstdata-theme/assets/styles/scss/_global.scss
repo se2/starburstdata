@@ -1,0 +1,326 @@
+// Global variables
+$global-transition: 300ms;
+$nav-height: 100px;
+
+.page-title {
+  // Remove Foundation vcard styling from author page titles
+  .vcard {
+    border: 0px;
+    padding: 0px;
+  }
+}
+
+// Add Foundation styling to password protect button
+.post-password-form input[type="submit"] {
+  @include button;
+}
+
+/*********************
+IMAGE GALLERY STYLES
+*********************/
+
+.gallery {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.gallery::before,
+.gallery::after {
+  content: ' ';
+  display: table;
+}
+
+.gallery::after {
+  clear: both;
+}
+
+.gallery.gallery-columns-1>dl {
+  @include grid-column;
+}
+
+.gallery.gallery-columns-2>dl {
+  @include grid-column(1 of 2);
+}
+
+.gallery.gallery-columns-3>dl {
+  @include grid-column(1 of 3);
+}
+
+.gallery.gallery-columns-4>dl {
+  @include grid-column(1 of 4);
+}
+
+.gallery.gallery-columns-5>dl {
+  @include grid-column(1 of 5);
+}
+
+.gallery.gallery-columns-6>dl {
+  @include grid-column(1 of 6);
+}
+
+.gallery.gallery-columns-7>dl {
+  @include grid-column(1 of 7);
+}
+
+.gallery.gallery-columns-8>dl {
+  @include grid-column(1 of 8);
+}
+
+.gallery dl {
+  width: 100%;
+  float: left;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.gallery dl:last-child:not(:first-child) {
+  float: right;
+}
+
+/*********************
+VISUAL EDITOR STYLES
+*********************/
+
+// Makes content look better in visual editor
+body#tinymce {
+  margin: 20px;
+}
+
+/******************* Override Foundation Styles ********************/
+
+.grid-container:not(.full)>.grid-padding-x {
+  margin: 0;
+}
+
+/******************* Global Styles ********************/
+
+a {
+  font-family: 'Avenir Next', Arial, sans-serif;
+  font-weight: 500;
+  color: #00a7b5;
+}
+
+a:hover {
+  color: #005e66;
+}
+
+ul,
+ol {
+  font-family: 'Avenir Next', Arial, sans-serif;
+  font-weight: 500;
+  color: #75777b;
+  font-size: .9375rem;
+  line-height: 1.4375rem;
+  padding-left: 1.25rem;
+}
+
+img {
+  padding: 3rem 0;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-contain {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-center-top {
+  background-position: center top;
+}
+
+.bg-center-bottom {
+  background-position: center bottom;
+}
+
+.bg-center {
+  background-position: center center;
+}
+
+.bg-center-right {
+  background-position: center right;
+}
+
+.bg-center-left {
+  background-position: center left;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.lighter {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.abs-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.abs-center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.nostyle-list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.flex-center-items {
+  height: 100%;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.main-container,
+.container {
+  @include xy-grid-container;
+  max-width: $global-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-container {
+  padding: 3.25rem 0;
+}
+
+.flex-bottom {
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+
+.button {
+  border: 2px solid $primary-color;
+  border-radius: 4px;
+  @include breakpoint(large) {
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+  &.small {
+    padding: 12px 10px;
+  }
+  &.tiny {
+    padding: 4px 10px;
+  }
+  &.menu-button {
+    padding: 0;
+    margin-left: 10px;
+    border-color: $primary-color;
+    a {
+      color: $primary-color;
+    }
+    &:hover {
+      background-color: $primary-color;
+      a {
+        color: $white;
+      }
+    }
+  }
+  &.reverse {
+    border-color: $white;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $primary-color;
+    }
+  }
+  &.fill {
+    border-color: $white;
+    background-color: $white;
+    color: $primary-color;
+    &:hover {
+      color: $white;
+      background-color: transparent;
+    }
+  }
+}
+
+.banner-button {
+  border: #00a7b5;
+}
+
+.banner-button a {
+  color: #00a7b5;
+}
+
+.cta-container {
+  background: #00a7b5;
+  padding: 1.5rem;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.secondary-color {
+  color: $secondary-color;
+}
+
+.white-color {
+  color: white;
+}
+
+.grayscale {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.fz-18 {
+  font-size: 18px;
+}
+
+.fz-17 {
+  font-size: 17px;
+}
+
+.light-gray {
+  color: $light-gray;
+}

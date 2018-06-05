@@ -1,0 +1,13 @@
+.footer {
+  clear: both;
+  background-color: #f1f1f2;
+  @include breakpoint(large) {
+    padding: rem-calc(70px) 0;
+  }
+}
+
+.social-link {
+  margin-left: 20px;
+  font-size: 30px;
+  line-height: 1;
+}

@@ -1,0 +1,35 @@
+.site-logo {
+  max-width: 210px;
+  padding: 0;
+}
+
+.page-navigation {
+  margin-top: 1rem;
+}
+
+.menu {
+  align-items: center;
+  a {
+    transition: color $global-transition;
+    font-weight: 500;
+    color: $light-gray;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.top-bar {
+  padding: 0;
+  min-height: $nav-height;
+}
+
+.site-announcement {
+  background-color: #333333;
+  padding: rem-calc(11px) 0;
+  p {
+    margin-bottom: 0;
+    font-size: rem-calc(18px);
+    padding: 0;
+  }
+}
