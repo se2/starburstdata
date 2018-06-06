@@ -79,13 +79,13 @@ get_header(); ?>
 </div>
 <!-- /Text block -->
 
-<!-- Text image block -->
-<div class="page-block page-block--text-img pos-rel" style="background-color:#d5d6d7;">
+<!-- Text image overlap block -->
+<div class="page-block page-block--overlap-img pos-rel" style="background-color:#d5d6d7;">
 	<div class="container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell large-6 text-col">
 				<h2 class="secondary-color light">Separation of Storage and Compute</h2>
-				<p>
+				<p class="mb0 text-justify">
 					With data volumes and types of data increasing on a daily basis, placing this data on a flexible storage
 					medium such as HDFS or a cloud object storage such as Amazon's S3, S3-compatible stores (Minio, ceph), and
 					Azure's Blob Storage provides a company with great flexibility on when and where they consume this data.
@@ -94,12 +94,71 @@ get_header(); ?>
 					<strong class="secondary-color">significant cost savings</strong>.
 				</p>
 			</div>
-			<img class="overlap-img" src="/wp-content/uploads/2018/06/Convergence_OfficeTeam.png" alt="" style="height:461px;">
+			<?php $overlap_height = '70px'; ?>
+			<img class="overlap-img" src="/wp-content/uploads/2018/06/Convergence_OfficeTeam.png" alt="" style="height:calc(100% + <?php echo esc_attr( $overlap_height ); ?>);">
 		</div>
 	</div>
 </div>
-<!-- /Text image block -->
+<!-- /Text image overlap block -->
 
+<!-- Text image in columns block -->
+<div class="page-block page-block--text-img pos-rel">
+	<div class="container">
+		<!-- Text-image row -->
+		<div class="grid-x grid-margin-x flex-bottom page-block--text-img__row">
+			<div class="cell medium-6 text-center">
+				<img src="/wp-content/uploads/2018/06/interactive-analytics.png" alt="">
+			</div>
+			<div class="cell medium-6">
+				<h3 class="secondary-color light">Interactive Analytics</h3>
+				<p class="small mb0">
+					From the beginning Presto was designed with SQL query performance in mind. It leverages both well-known and novel techniques for distributed query processing.
+					Some include In-memory parallel processing, Pipelined execution across nodes in the cluster, Multithreaded execution model to keep all the CPU cores busy,
+					Efficient flat-memory data structures to minimize Java garbage collection, and Java Byte code generation. This translates to faster insights into your data at
+					a fraction of the cost of other solutions.
+				</p>
+			</div>
+		</div>
+		<!-- /Text-image row -->
+		<!-- Text-image row -->
+		<div class="grid-x grid-margin-x flex-center-items page-block--text-img__row">
+			<div class="cell medium-6">
+				<h3 class="secondary-color light">Analyze Anything</h3>
+				<p class="small mb0">
+					Allow your business intelligence users and <b>data scientists</b> to use their favorite tools (Tableau, Qlik, Apache Superset) to access and analyze virtually any data source via Presto.
+					Analyze data from HDFS, object stores, RDBMS (SQL Server, Oracle, MySQL, PostgreSQL), Kafka, Cassandra, MongoDB, and many others. Presto’s flexible architecture allows one perform
+					analytics <b>federated</b> across multiple data sources at the same time. Easily combine historical data from <b>HDFS</b> or objects stores with most recent incoming data from <b>Kafka</b> in the same query.
+				</p>
+			</div>
+			<div class="cell medium-6 text-center">
+				<img src="/wp-content/uploads/2018/06/analyze.png" alt="">
+			</div>
+		</div>
+		<!-- /Text-image row -->
+		<!-- Text-image row -->
+		<div class="grid-x grid-margin-x page-block--text-img__row grid-centered">
+			<div class="cell medium-5">
+				<h3 class="secondary-color light">Secure Everything</h3>
+				<p class="small mb0">
+					Have piece of mind that your data is safe and secure. Starburst’s Presto will fully integrate with your <b>Kerberos</b> and <b>LDAP</b> environments.
+					Further control authorized access to pieces of your data by leveraging AWS & Azure Access management, Hive Metastore Authorization, <b>Apache Sentry</b> Integration, and <b>Apache Ranger</b> integration.
+					For complete security, Starburst’s Presto will support data <b>encryption at-rest</b> and <b>in-transit</b>.
+				</p>
+			</div>
+			<div class="cell medium-5">
+				<h3 class="secondary-color light">Deploy Anywhere</h3>
+				<p class="small mb0">
+					The separation of storage and compute allows Presto flexible deployment options. Deploy on public clouds such as AWS and Azure, private clouds such as OpenStack,
+					on premises on bare metal commodity hardware or in a virtualized environment. ware on premises. Or let us deploy and manage with our <b>fully managed Presto offering</b>.
+				</p>
+			</div>
+		</div>
+		<!-- /Text-image row -->
+	</div>
+</div>
+<!-- /Text image in columns block -->
+
+<!-- Page footer CTA block -->
 <div class="page-block page-block--cta" style="background-color:#00a7b5;">
 	<div class="container">
 		<div class="grid-x grid-centered">
@@ -111,5 +170,6 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+<!-- /Page footer CTA block -->
 
 <?php get_footer(); ?>
