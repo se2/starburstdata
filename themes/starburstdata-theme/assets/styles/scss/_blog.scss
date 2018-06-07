@@ -97,6 +97,7 @@
 }
 
 .archive-popular-container {
+	align-items: center;
   background: #f1f1f2;
   margin: 1rem 0;
 }
@@ -117,8 +118,10 @@
 }
 
 .archive-popular-title {
+	font-size: rem-calc(16px);
+	line-height: 1.25;
+	color: get-color(secondary);
   margin-bottom: 0;
-  line-height: 1.25rem;
   padding-bottom: .125rem;
 }
 
@@ -130,9 +133,12 @@
 }
 
 .archive-popular-date .byline {
-  font-size: .8125rem;
-  color: #253746;
-  padding: 0;
+	font-size: rem-calc(13px);
+	color: get-color(secondary);
+	padding: 0;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-top: rem-calc(5px);
 }
 
 .archive-article-wrapper {

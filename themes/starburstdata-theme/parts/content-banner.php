@@ -45,7 +45,8 @@ if ( get_field( 'show_scrolling_menu' ) ) :
 			?>
 			<a href="#<?php echo esc_attr( $block_id ); ?>" class="<?php echo ( 0 === $index ) ? 'is-active' : ''; ?>"><?php the_sub_field( 'block_scrolling_menu_name' ); ?></a>
 			<?php endif; ?>
-			<?php $index++; endwhile; ?>
+			<?php $index++; ?>
+			<?php endwhile; ?>
 		</div>
 	</div>
 </div>

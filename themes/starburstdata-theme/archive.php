@@ -1,6 +1,18 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Default archive page
+ *
+ * @category   Template
+ * @package    WordPress
+ * @subpackage StarburstData
+ * @author     Delin Design <contact@delindesign.com>
+ * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+ * @link       https://delindesign.com
+ */
 
-<!--------- Latest Post (Banner) ------------>
+get_header(); ?>
+
+<!-- Latest post -->
 <?php
 $paged     = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 $term_id   = get_queried_object()->term_id;
@@ -11,49 +23,56 @@ $the_query = new WP_Query( array(
 ));
 ?>
 
-<?php if ( $the_query->have_posts() ) : ?>
-<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-<div class="interior-banner-wrapper">
+<?php
+if ( $the_query->have_posts() ) :
+	while ( $the_query->have_posts() ) :
+		$the_query->the_post();
+?>
+<!-- Interior banner -->
+<div class="interior-banner">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-center">
-			<div class="interior-banner-container cell medium-7 text-center ">
-				<p class="archive-latest-header">Latest Post:</p>
-				<h2 class="archive-latest-title"><?php the_title(); ?></h2>
+		<div class="grid-x align-center interior-banner__wrapper">
+			<div class="interior-banner__content cell large-8 text-center">
+				<p class="archive-latest-header mb0 lh1">Latest Post:</p>
+				<h1><?php the_title(); ?></h1>
 				<a class="archive-latest-link" href="<?php the_permalink(); ?>">View Post&nbsp;&raquo;</a>
 			</div>
 		</div>
 	</div>
 </div>
+<!-- /Interior banner -->
 <?php endwhile; ?>
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
 
-<!--------- Popular Posts (User-Selectable) ------------>
+<!-- Popular Posts (User-Selectable) -->
 <div class="grid-container archive-popular-wrapper">
 	<div class="grid-x grid-padding-x">
 		<div class="cell medium-12 text-center">
-			<h3 class="archive-popular-header"><?php the_field('blog_popular_header', 'option'); ?></h3>
+			<h3 class="archive-popular-header"><?php the_field( 'blog_popular_header', 'option' ); ?></h3>
 		</div>
 	</div>
 
-	<?php if ( have_rows( 'blog_popular_repeater', 'option' ) ): ?>
+	<?php if ( have_rows( 'blog_popular_repeater', 'option' ) ) : ?>
 	<div class="grid-x grid-padding-x medium-up-3 small-up-1">
-		<?php while( have_rows('blog_popular_repeater', 'option') ): the_row();
-			$blog_popular_repeater_post = get_sub_field('blog_popular_repeater_post', 'option');
+		<?php
+		while ( have_rows( 'blog_popular_repeater', 'option' ) ) :
+			the_row();
+			$blog_popular_repeater_post = get_sub_field( 'blog_popular_repeater_post', 'option' );
 
-			if ( $blog_popular_repeater_post ):
-				// override $post
+			if ( $blog_popular_repeater_post ) :
+				// override $post.
 				$post = $blog_popular_repeater_post;
 				setup_postdata( $post );
 				?>
 
 				<div class="cell">
 					<div class="grid-x align-middle archive-popular-container">
-						<div class="archive-popular-thumbnail">
+						<div class="archive-popular-thumbnail cell small-3 medium-4">
 							<?php the_post_thumbnail( 'thumbnail' ); ?>
 						</div>
 
-						<div class="archive-popular-info">
+						<div class="archive-popular-info cell small-9 medium-8">
 							<h4 class="archive-popular-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							<span class="archive-popular-date"><?php get_template_part( 'parts/content', 'byline' ); ?></span>
 						</div>
@@ -67,13 +86,17 @@ $the_query = new WP_Query( array(
 	<?php endif; ?>
 </div>
 
-<!--------- List of Posts ------------>
+<!-- List of Posts -->
 <div class="archive-main-container">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-center">
+		<div class="grid-x align-center">
 			<div class="cell medium-8 small-12">
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) :
+						the_post();
+				?>
 
 				<?php get_template_part( 'parts/loop', 'archive' ); ?>
 
@@ -91,6 +114,5 @@ $the_query = new WP_Query( array(
 		</div>
 	</div>
 </div>
-
 
 <?php get_footer(); ?>
