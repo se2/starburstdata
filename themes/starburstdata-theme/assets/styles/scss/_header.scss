@@ -7,12 +7,14 @@
   margin-top: 1rem;
 }
 
+// Main menu styling
 .menu {
   align-items: center;
   a {
     transition: color $global-transition;
     font-weight: 500;
     color: $light-gray;
+    line-height: 1.3;
     &:hover {
       color: $primary-color;
     }
@@ -29,6 +31,7 @@
   }
 }
 
+// Reset Foundation padding and height for header
 .top-bar {
   padding: 0;
   min-height: $nav-height;
@@ -46,6 +49,7 @@
   }
 }
 
+// No arrow for parent menu
 .dropdown.menu.medium-horizontal {
   >li.is-dropdown-submenu-parent {
     >a {
@@ -55,6 +59,13 @@
       }
     }
   }
+}
+
+// Submenu styling
+.dropdown .is-dropdown-submenu a {
+  padding-top: rem-calc(9px);
+  padding-bottom: rem-calc(9px);
+  line-height: 1.3;
 }
 
 .top-bar .top-bar-left {

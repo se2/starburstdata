@@ -117,11 +117,10 @@ a {
   transition: color $global-transition;
   font-family: 'Avenir Next', Arial, sans-serif;
   font-weight: 500;
-  color: #00a7b5;
-}
-
-a:hover {
-  color: #005e66;
+  color: get-color(primary);
+  &:hover {
+    color: get-color(secondary);
+  }
 }
 
 ul,
@@ -208,7 +207,7 @@ ol {
 
 .no-maxwidth {
 	@include breakpoint(medium) {
-		max-width: none;
+		max-width: none !important;
 	}
 }
 

@@ -35,7 +35,7 @@ jQuery(document).ready(function () {
 	var scroll = new SmoothScroll('a[href*="#"]', {
 		speed: 1000,
 		easing: 'easeInOutQuart',
-		offset: scrollingMenuHeight,
+		offset: scrollingMenuHeight - 1, // know bug issue when using with below scrolling code, minus 1 to account for this issue.
 		updateURL: true,
 		popstate: true,
 	});
@@ -53,7 +53,7 @@ jQuery(document).ready(function () {
 		jQuery('#page-scroll a').each(function() {
 			var currLink = jQuery(this);
 			var refElement = $(currLink.attr("href"));
-			if (refElement.position().top <= scrollPos + scrollingMenuHeight && refElement.position().top + refElement.height() > scrollPos) {
+			if (refElement.position().top <= scrollPos + scrollingMenuHeight && refElement.position().top + Math.ceil(refElement.height()) > scrollPos) {
 				jQuery(this).siblings().each(function () {
 					jQuery(this).removeClass('is-active');
 				})

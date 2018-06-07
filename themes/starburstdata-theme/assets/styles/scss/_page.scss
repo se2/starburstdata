@@ -42,6 +42,14 @@
 // Page blocks
 $mobile-padding: 30px;
 .page-block {
+  &--fullwidth {
+    .container,
+    .main-container,
+    .grid-x
+    .row {
+      max-width: 100%;
+    }
+  }
   &--padding {
 		padding-top: 30px;
 		padding-bottom: 30px;
@@ -55,6 +63,9 @@ $mobile-padding: 30px;
     width: 100%;
     align-items: flex-end;
     justify-content: center;
+    p {
+      text-align: justify;
+    }
     .inner {
       width: 100%;
     }
@@ -107,25 +118,18 @@ $mobile-padding: 30px;
 		}
   }
   &--text-img {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: rem-calc(50px);
+    padding-bottom: rem-calc(50px);
     &__row {
       box-sizing: border-box;
       @include breakpoint(medium) {
-        padding: 70px 0;
+        padding: rem-calc(70px) 0;
       }
       p {
-        text-align: justify;
+        line-height: 1.4;
       }
-      img {
-				width: 55%;
+			.cell {
 				margin-bottom: rem-calc($mobile-padding);
-        @include breakpoint(medium) {
-					margin-bottom: 0;
-        }
-			}
-			.text-col {
-				margin-bottom: $mobile-padding;
 				@include breakpoint(medium) {
 					margin-bottom: 0;
 				}
@@ -185,7 +189,7 @@ $mobile-padding: 30px;
     }
     tr {
       &:nth-child(even) {
-        background-color: $white;
+        background-color: #f9f9f9;
       }
     }
     ul {
