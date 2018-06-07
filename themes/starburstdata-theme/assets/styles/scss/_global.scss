@@ -207,7 +207,9 @@ ol {
 }
 
 .no-maxwidth {
-  max-width: none;
+	@include breakpoint(medium) {
+		max-width: none;
+	}
 }
 
 .nomargin {
@@ -469,4 +471,14 @@ $margin: 20;
   width: 100%;
   max-width: none;
   margin: 0 auto;
+}
+
+@include breakpoint(mobile down) {
+  /* reverse stack mobile */
+  .stack-up {
+    order: 11;
+  }
+  .stack-down {
+    order: 12;
+  }
 }

@@ -1,6 +1,7 @@
 .footer {
   clear: both;
-  background-color: #f1f1f2;
+	background-color: #f1f1f2;
+	padding: rem-calc(45px) 0;
   @include breakpoint(large) {
     padding: rem-calc(70px) 0;
   }

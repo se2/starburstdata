@@ -16,7 +16,7 @@
 
 							<div class="grid-x grid-margin-x">
 
-								<div class="cell small-12 medium-9">
+								<div class="cell small-12 medium-8 large-9">
 									<h2 class="primary-color light">We are the Presto Experts.</h2>
 									<nav role="navigation">
 										<?php joints_footer_links(); ?>
@@ -24,7 +24,7 @@
 									<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p> -->
 								</div>
 
-								<div class="cell small-12 medium-3 text-right">
+								<div class="cell small-12 medium-4 large-3 text-right">
 									<a class="light-gray fz-18" href="mailto:hello@starburstdata.com">hello@starburstdata.com</a>
 								</div>
 
@@ -32,11 +32,11 @@
 
 							<div class="grid-x grid-margin-x">
 
-								<div class="cell small-12 medium-9"></div>
-								<div class="cell small-12 medium-3 text-right">
+								<div class="cell small-12 medium-8 large-9"></div>
+								<div class="cell small-12 medium-4 large-3 text-right">
 									<?php
 									$socials = array( 'github', 'twitter', 'facebook', 'linkedin' );
-									foreach ($socials as $key => $social) :
+									foreach ( $socials as $key => $social ) :
 									?>
 									<a class="light-gray social-link size-21" href="/#!"><i class="fi-social-<?php echo esc_attr( $social ); ?>"></i></a>
 									<?php endforeach; ?>

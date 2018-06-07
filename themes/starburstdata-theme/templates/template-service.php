@@ -13,7 +13,7 @@
 get_header();
 
 if ( have_posts() ) :
-	while (have_posts()) :
+	while ( have_posts() ) :
 		the_post();
 ?>
 
@@ -50,50 +50,50 @@ if ( have_posts() ) :
 			<div class="cell small-12">
 				<div class="page-block--text__content">
 					<br>
-					<table width="100%" class="nostyle-table mb25">
-						<tr>
-							<td style="width:25%;" class="text-center">
-								<img src="/wp-content/uploads/2018/06/1.png" alt="">
-							</td>
-							<td style="width:25%;" class="text-center">
-								<img src="/wp-content/uploads/2018/06/2.png" alt="">
-							</td>
-							<td style="width:25%;" class="text-center">
-								<img src="/wp-content/uploads/2018/06/3.png" alt="">
-							</td>
-							<td style="width:25%;" class="text-center">
-								<img src="/wp-content/uploads/2018/06/4.png" alt="">
-							</td>
-						</tr>
-					</table>
-					<table width="100%" class="nostyle-table mb50">
-						<tr>
-							<td style="padding:0 10px;width:25%;" class="text-center">
-								<h6 class="bold">Presto Server Software</h6>
-								<p class="small">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
-								</p>
-							</td>
-							<td style="padding:0 10px;width:25%;" class="text-center">
-								<h6 class="bold">Presto Admin Installation Tool</h6>
-								<p class="small">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
-								</p>
-							</td>
-							<td style="padding:0 10px;width:25%;" class="text-center">
-								<h6 class="bold">Presto Client Tools</h6>
-								<p class="small">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
-								</p>
-							</td>
-							<td style="padding:0 10px;width:25%;" class="text-center">
-								<h6 class="bold">Presto Documentation</h6>
-								<p class="small">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
-								</p>
-							</td>
-						</tr>
-					</table>
+					<div class="grid-x grid-padding-x mb25 show-for-medium">
+						<div class="cell small-12 medium-3 text-center">
+							<img src="/wp-content/uploads/2018/06/1.png" alt="">
+						</div>
+						<div class="cell small-12 medium-3 text-center">
+							<img src="/wp-content/uploads/2018/06/2.png" alt="">
+						</div>
+						<div class="cell small-12 medium-3 text-center">
+							<img src="/wp-content/uploads/2018/06/3.png" alt="">
+						</div>
+						<div class="cell small-12 medium-3 text-center">
+							<img src="/wp-content/uploads/2018/06/4.png" alt="">
+						</div>
+					</div>
+					<div class="grid-x grid-padding-x mb50">
+						<div class="cell small-12 medium-3 text-center">
+							<img class="mb30 hide-for-medium" src="/wp-content/uploads/2018/06/1.png" alt="">
+							<h6 class="bold">Presto Server Software</h6>
+							<p class="small">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
+							</p>
+						</div>
+						<div class="cell small-12 medium-3 text-center">
+							<img class="mb30 hide-for-medium" src="/wp-content/uploads/2018/06/2.png" alt="">
+							<h6 class="bold">Presto Admin Installation Tool</h6>
+							<p class="small">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
+							</p>
+						</div>
+						<div class="cell small-12 medium-3 text-center">
+							<img class="mb30 hide-for-medium" src="/wp-content/uploads/2018/06/3.png" alt="">
+							<h6 class="bold">Presto Client Tools</h6>
+							<p class="small">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
+							</p>
+						</div>
+						<div class="cell small-12 medium-3 text-center">
+							<img class="mb30 hide-for-medium" src="/wp-content/uploads/2018/06/4.png" alt="">
+							<h6 class="bold">Presto Documentation</h6>
+							<p class="small">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sapien, blandit dolor id, dictum lacus pellentesque
+							</p>
+						</div>
+					</div>
 					<div class="text-center">
 						<a href="/#!" class="button small">Read about the 195e release</a>
 					</div>
@@ -107,10 +107,10 @@ if ( have_posts() ) :
 <!-- Text image overlap block -->
 <?php $overlap_height = '65px'; ?>
 <div class="page-block page-block--overlap-img page-block--overlap-img--left pos-rel is-overlap" id="on-premises-block">
-	<div class="inner" style="background-color:#d5d6d7;" >
+	<div class="inner" style="background-color:#d5d6d7;">
 		<div class="container">
-			<div class="grid-x grid-margin-x grid-right">
-				<div class="cell large-6 text-col">
+			<div class="grid-x grid-padding-x grid-right">
+				<div class="cell large-6 text-col" style="background-color:#d5d6d7;">
 					<h2 class="secondary-color light">Starburst Enterprise Presto Client Drivers</h2>
 					<p>
 						The  Starburst Enterprise Presto Client Drivers includes enterprise grade ODBC and JDBC drivers enabling you to use your preferred Business Intelligence tools with Presto.
@@ -137,7 +137,7 @@ if ( have_posts() ) :
 			</div>
 		</div>
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6">
+			<div class="cell small-12 medium-6 stack-down">
 				<h4 class="mb20 bold red-color">Starburst ES leads the industry in:</h4>
 				<table class="nostyle-table" width="100%">
 					<tr>
@@ -183,7 +183,7 @@ if ( have_posts() ) :
 				</table>
 			</div>
 			<div class="cell small-12 medium-6">
-				<img class="no-maxwidth" src="/wp-content/uploads/2018/06/laptop.png" alt="">
+				<img class="mb30 no-maxwidth" src="/wp-content/uploads/2018/06/laptop.png" alt="">
 			</div>
 		</div>
 	</div>
@@ -194,7 +194,7 @@ if ( have_posts() ) :
 <div class="page-block page-block--padding page-block--comapre-table" style="background-color:#f1f1f2" id="why-starburst-block">
 	<div class="container">
 		<div class="grid-x grid-margin-x grid-centered">
-			<div class="cell small-12 medium-10">
+			<div class="cell small-12 large-10">
 				<h1 class="fz-52 primary-color text-center light mb40">Why Starburst?</h1>
 				<?php
 				$features = array(
@@ -226,10 +226,10 @@ if ( have_posts() ) :
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($features as $key => $feature) : ?>
+						<?php foreach ( $features as $key => $feature ) : ?>
 						<tr>
 							<td class="compare-table__column pos-rel compare-table__content">
-								<?php echo $feature[0]; ?>
+								<?php echo $feature[0]; // phpcs:ignore ?>
 							</td>
 							<td class="compare-table__column pos-rel compare-table__presto">
 								<?php if ( $feature[1] ) : ?>
@@ -271,7 +271,7 @@ if ( have_posts() ) :
 <div class="page-block page-block--cta" style="background-color:#00a7b5;">
 	<div class="container">
 		<div class="grid-x grid-centered">
-			<div class="cell small-12 medium-6 text-center">
+			<div class="cell small-12 large-6 text-center">
 				<h1 class="white-color lh1 mb10">Try Presto Today!</h1>
 				<h5 style="color:#90dce2;" class="mb20">Download the Starburst Enterprise Distribution.</h5>
 				<a href="/#!" class="button fill">Download Now</a>
