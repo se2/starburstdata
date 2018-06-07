@@ -96,15 +96,6 @@ IMAGE GALLERY STYLES
   float: right;
 }
 
-/*********************
-VISUAL EDITOR STYLES
-*********************/
-
-// Makes content look better in visual editor
-body#tinymce {
-  margin: 20px;
-}
-
 /******************* Override Foundation Styles ********************/
 
 .grid-container:not(.full)>.grid-padding-x {
@@ -118,9 +109,6 @@ a {
   font-family: 'Avenir Next', Arial, sans-serif;
   font-weight: 500;
   color: get-color(primary);
-  &:hover {
-    color: get-color(secondary);
-  }
 }
 
 ul,

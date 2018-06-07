@@ -83,17 +83,23 @@ $mobile-padding: 30px;
 				height: 100%;
 				left: calc(50% + #{map-get($map: $grid-column-gutter, $key: small)});
 			}
-			@include breakpoint(xlarge) {
+			@include breakpoint(1366px) {
+				left: auto;
+				right: calc((#{$global-width} - 100vw) / 2);
+			}
+			@include breakpoint(1680px) {
+				right: auto;
 				left: calc(58.333333% + #{map-get($map: $grid-column-gutter, $key: large)});
 			}
     }
     &--left {
       img.overlap-img {
 				@include breakpoint(large) {
-					left: auto;
-					right: calc(50% + #{map-get($map: $grid-column-gutter, $key: small)});
+					right: auto;
+					left: calc((#{$global-width} - 100vw) / 2);
 				}
-				@include breakpoint(xlarge) {
+				@include breakpoint(1680px) {
+					left: auto;
 					right: calc(58.333333% + #{map-get($map: $grid-column-gutter, $key: large)});
 				}
       }

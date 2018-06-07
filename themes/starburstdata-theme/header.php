@@ -1,15 +1,22 @@
 <?php
 /**
- * The template for displaying the header
+ * The template for displaying the header.
+ * Contains closing divs for header.php.
+ * For more info: https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * This is the template that displays all of the <head> section
- *
+ * @category   Template
+ * @package    WordPress
+ * @subpackage StarburstData
+ * @author     Delin Design <contact@delindesign.com>
+ * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+ * @link       https://delindesign.com
  */
+
 ?>
 
 <!doctype html>
 
-  <html class="no-js"  <?php language_attributes(); ?>>
+	<html class="no-js"  <?php language_attributes(); ?>>
 
 	<head>
 		<meta charset="utf-8">
@@ -23,12 +30,12 @@
 
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
-			<!-- Icons & Favicons -->
-			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-			<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />
-	    <?php } ?>
+		<!-- Icons & Favicons -->
+		<link rel="icon" href="<?php echo get_template_directory_uri(); // phpcs:ignore ?>/favicon.png">
+		<link href="<?php echo get_template_directory_uri(); // phpcs:ignore ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />
+		<?php } ?>
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 		<?php wp_head(); ?>
 
@@ -58,7 +65,7 @@
 
 					<div class="container">
 						<!-- This navs will be applied to the topbar, above all content
-							 To see additional nav styles, visit the /parts directory -->
+							To see additional nav styles, visit the /parts directory -->
 						<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 					</div>
 

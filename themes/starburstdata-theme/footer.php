@@ -1,12 +1,18 @@
 <?php
 /**
  * The template for displaying the footer.
- *
- * Comtains closing divs for header.php.
- *
+ * Contains closing divs for header.php.
  * For more info: https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @category   Template
+ * @package    WordPress
+ * @subpackage StarburstData
+ * @author     Delin Design <contact@delindesign.com>
+ * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+ * @link       https://delindesign.com
  */
- ?>
+
+?>
 
 				<footer class="footer" role="contentinfo">
 
@@ -21,7 +27,6 @@
 									<nav role="navigation">
 										<?php joints_footer_links(); ?>
 									</nav>
-									<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p> -->
 								</div>
 
 								<div class="cell small-12 medium-4 large-3 text-right">
