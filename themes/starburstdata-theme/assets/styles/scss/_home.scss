@@ -1,9 +1,25 @@
-.home-banner-background {
-  background-position: center center;
+.home-banner {
+	@include breakpoint(large) {
+		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px - 90px);
+	}
+	@include breakpoint(xlarge) {
+		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 125px - 8px - 50px);
+	}
+	@include breakpoint(xxlarge) {
+		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px);
+	}
+	@include breakpoint(wide) {
+		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px - 90px);
+	}
+	h1 {
+		@include breakpoint(medium) {
+			font-size: rem-calc(38px);
+		}
+	}
 }
 
 .home-banner-container {
-  padding: 7.938rem 0 11.88rem 0;
+	padding-top: rem-calc(130px);
 }
 
 .home-banner-headline {
@@ -26,7 +42,8 @@
 
 .home-intro-header {
   font-weight: 700;
-  color: #233746;
+	color: #233746;
+	font-size: rem-calc(21px);
 }
 
 .home-intro-description {
