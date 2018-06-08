@@ -52,10 +52,10 @@ $mobile-padding: 30px;
   }
   &--padding {
 		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-bottom: 20px;
     @include breakpoint(medium) {
       padding-top: 50px;
-      padding-bottom: 75px;
+      padding-bottom: 20px;
     }
   }
   &--overlap-img {
