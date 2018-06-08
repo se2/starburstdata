@@ -64,4 +64,14 @@ jQuery(document).ready(function () {
 		});
 	}
 
+	// multistep form behavior
+	$('.js-button-next').on('click', function() {
+		$(this).parent().parent().addClass('hidden-step').removeClass('current-step');
+		$(this).parent().parent().next().removeClass('hidden-step').addClass('current-step');
+	});
+	$('.js-button-prev').on('click', function() {
+		$(this).parent().parent().addClass('hidden-step').removeClass('current-step');
+		$(this).parent().parent().prev().removeClass('hidden-step').addClass('current-step');
+	});
+
 });

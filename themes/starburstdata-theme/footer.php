@@ -20,13 +20,10 @@
 
 						<div class="inner-footer">
 
-							<div class="grid-x grid-margin-x">
+							<div class="grid-x grid-margin-x mb20">
 
 								<div class="cell small-12 medium-8 large-9">
 									<h2 class="primary-color light">We are the Presto Experts.</h2>
-									<nav role="navigation">
-										<?php joints_footer_links(); ?>
-									</nav>
 								</div>
 
 								<div class="cell small-12 medium-4 large-3 text-right">
@@ -37,13 +34,29 @@
 
 							<div class="grid-x grid-margin-x">
 
-								<div class="cell small-12 medium-8 large-9"></div>
+								<div class="cell small-12 medium-8 large-9">
+									<div class="grid-x small-up-1 medium-up-5">
+										<div class="cell footer-menu">
+											<?php joints_footer_links(); ?>
+										</div>
+										<?php for ($i = 1; $i <= 4 ; $i++): ?>
+										<div id="footer-widget-<?php echo $i; ?>" class="footer-menu cell">
+												<?php if ( is_active_sidebar( 'footer-widget-' . $i ) ) { dynamic_sidebar( 'footer-widget-' . $i ); } ?>
+										</div>
+										<?php endfor; ?>
+									</div>
+								</div>
 								<div class="cell small-12 medium-4 large-3 text-right">
 									<?php
-									$socials = array( 'github', 'twitter', 'facebook', 'linkedin' );
+									$socials = array(
+										array( 'service' => 'github', 'link' => 'https://github.com/starburstdata'),
+										array( 'service' => 'twitter', 'link' => 'https://twitter.com/starburstdata'),
+										array( 'service' => 'facebook', 'link' => 'https://www.facebook.com/starburstdata/'),
+										array( 'service' => 'linkedin', 'link' => 'https://www.linkedin.com/company/starburstdata/'),
+									);
 									foreach ( $socials as $key => $social ) :
 									?>
-									<a class="light-gray social-link size-21" href="/#!"><i class="fi-social-<?php echo esc_attr( $social ); ?>"></i></a>
+									<a target="_blank" class="light-gray social-link size-21" href="<?php echo esc_attr( $social['link'] ) ?>"><i class="fi-social-<?php echo esc_html( $social['service'] ); ?>"></i></a>
 									<?php endforeach; ?>
 								</div>
 

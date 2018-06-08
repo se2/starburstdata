@@ -1,4 +1,19 @@
 .home-banner {
+	@include breakpoint(mobile down) {
+		.home-banner-container {
+			text-align: center;
+			padding-top: 50px;
+		}
+	}
+	@include breakpoint(small) {
+		background: none;
+	}
+	@include breakpoint(medium) {
+		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 392px);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center right;
+	}
 	@include breakpoint(large) {
 		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px - 90px);
 	}

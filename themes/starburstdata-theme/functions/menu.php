@@ -40,6 +40,9 @@ function add_popup_trigger( $items, $args ) {
 	if ( 'main-nav' === $args->theme_location ) {
 		$items .= '<li class="button tiny menu-button"><a href="#" data-open="try-presto">Try Presto</a></li>';
 	}
+	if ( 'footer-links' === $args->theme_location ) {
+		$items = '<li class="menu-item menu-item--popup"><a class="bold primary-color no-outline" href="#" data-open="try-presto">Try Presto</a></li>' . $items;
+	}
 	return $items;
 }
 

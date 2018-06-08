@@ -7,5 +7,14 @@
 ?>
 
 <div class="off-canvas position-right" id="off-canvas" data-off-canvas>
-	<?php joints_off_canvas_nav(); ?>
+	<?php
+		wp_nav_menu(array(
+			'container'      => false,
+			'menu_class'     => 'menu-vertical menu',
+			'theme_location' => 'main-nav',
+			'depth'          => 5,
+			'fallback_cb'    => false,
+			'walker'         => new Topbar_Menu_Walker(),
+		));
+	?>
 </div>

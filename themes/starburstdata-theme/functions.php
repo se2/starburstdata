@@ -85,3 +85,17 @@ function my_mce4_options( $init ) {
 }
 
 add_filter( 'tiny_mce_before_init', 'my_mce4_options' );
+
+for ( $i = 1; $i <= 4 ; $i++ ) {
+	register_sidebar(
+		array(
+			'id' 						=> 'footer-widget-' . $i,
+			'name'          => __( 'Footer column ' . $i, 'leasepilot' ),
+			'description'   => __( 'Drag widgets to this footer container', 'leasepilot' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' 	=> '</aside>',
+			'before_title' 	=> '<h3 class="footer-title">',
+			'after_title' 	=> '</h3>',
+		)
+	);
+}

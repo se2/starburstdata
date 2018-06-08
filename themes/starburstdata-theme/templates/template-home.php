@@ -18,13 +18,14 @@ if ( have_posts() ) :
 
 <div class="bg-contain bg-center-right home-banner pos-rel" style="background-image: url(<?php the_field( 'home_banner_image' ); ?>;">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x">
-			<div class="home-banner-container cell medium-5">
+		<div class="grid-x">
+			<div class="home-banner-container cell small-12 medium-6">
 				<h1 class="home-banner-headline"><?php the_field( 'home_banner_headline' ); ?></h1>
 				<h6 class="secondary-color"><?php the_field( 'home_banner_subhead' ); ?></h6>
 			</div>
 		</div>
 	</div>
+	<img src="<?php the_field( 'home_banner_image' ); ?>" alt="<?php the_title(); ?>" class="mt30 hide-for-medium">
 </div>
 
 <div class="grid-container text-center main-container">
