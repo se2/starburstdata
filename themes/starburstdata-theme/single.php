@@ -52,17 +52,18 @@ get_header();
 	<div class="grid-container recent-posts-container">
 			<div class="grid-x grid-padding-x text-center">
 				<div class="cell medium-12">
-					<h3 class="archive-popular-header"><?php the_field( 'recent_posts_header', 'option' ); ?></h3>
+					<?php $term = get_the_category(); ?>
+					<h3 class="archive-popular-header">Read more <?php echo strtolower($term[0]->name); ?> posts</h3>
 				</div>
 			</div>
 
 		<div class="grid-x grid-padding-x medium-up-3 small-up-1">
 			<?php
-			$term   = get_the_category();
 			$the_query = new WP_Query( array(
 				'post_type'      => 'post',
 				'cat'            => $term[0]->term_id,
 				'posts_per_page' => 3,
+				'post__not_in'	 => array($post->ID),
 			));
 			?>
 
@@ -78,7 +79,12 @@ get_header();
 					</div>
 
 					<div class="archive-popular-info cell small-9 medium-8">
-						<h4 class="archive-popular-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<?php if (get_field('blog_url')) { ?>
+							<h4 class="archive-popular-title"><a href="<?php the_field('blog_url'); ?>"><?php the_title(); ?></a></h4>
+						<?php } else { ?>
+							<h4 class="archive-popular-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<?php } ?>
+
 						<span class="archive-popular-date"><?php get_template_part( 'parts/content', 'byline' ); ?></span>
 					</div>
 				</div>

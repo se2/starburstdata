@@ -1,0 +1,64 @@
+{
+    "key": "group_5b1ac072ac242",
+    "title": "Blog",
+    "fields": [
+        {
+            "key": "field_5b1ac0776172c",
+            "label": "External URL",
+            "name": "blog_url",
+            "type": "text",
+            "instructions": "If this is an external article, put the URL here. Otherwise, leave blank.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b1ac0c06172d",
+            "label": "External Article Excerpt",
+            "name": "blog_external_excerpt",
+            "type": "textarea",
+            "instructions": "Only enter information here if it is an article from an external link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1528480386
+}

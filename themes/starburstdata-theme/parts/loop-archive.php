@@ -22,11 +22,23 @@
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
 
 		<!-- Title -->
-		<h2 class="blog-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<?php if (get_field('blog_url')) { ?>
+			<h2 class="blog-title"><a href="<?php the_field('blog_url'); ?>" target="_blank" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<?php } else { ?>
+			<h2 class="blog-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<?php } ?>
 
 		<!-- Excerpt -->
-		<p class="archive-excerpt"><?php the_excerpt(); ?></p>
-		<a href="<?php the_permalink(); ?>">Read&nbsp;More&nbsp;&raquo;</a>
+		<?php if (get_field('blog_external_excerpt')) { ?>
+			<p class="archive-excerpt"><?php the_field('blog_external_excerpt'); ?></p>
+		<?php } else { ?>
+			<p class="archive-excerpt"><?php the_excerpt(); } ?></p>
+
+		<?php if (get_field('blog_url')) { ?>
+			<a href="<?php the_field('blog_url'); ?>" target="_blank">Read&nbsp;More&nbsp;&raquo;</a>
+		<?php } else { ?>
+			<a href="<?php the_permalink(); ?>">Read&nbsp;More&nbsp;&raquo;</a>
+		<?php } ?>
 
 	</div>
 
