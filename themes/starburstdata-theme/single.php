@@ -13,7 +13,12 @@
 get_header();
 ?>
 
-<div class="bg-cover blog-banner" style="background-image: url('<?php the_field( 'blog_banner_image' ); ?>');"></div>
+<div class="bg-cover blog-banner" style="background-image: url('<?php
+										 if (get_field("blog_banner_image")) { 
+											 the_field( "blog_banner_image" ); }
+										 else {
+											 the_field("default_banner_image", "option");
+										 } ?>');"></div>
 
 <div class="grid-container blog-content-container">
 	<div class="grid-x grid-padding-x align-center">
@@ -53,8 +58,10 @@ get_header();
 
 		<div class="grid-x grid-padding-x medium-up-3 small-up-1">
 			<?php
+			$term   = get_the_category();
 			$the_query = new WP_Query( array(
 				'post_type'      => 'post',
+				'cat'            => $term[0]->term_id,
 				'posts_per_page' => 3,
 			));
 			?>
