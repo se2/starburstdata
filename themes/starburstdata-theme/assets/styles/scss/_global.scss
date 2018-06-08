@@ -434,6 +434,12 @@ $margin: 20;
   }
 }
 
+.fz-40 {
+	@include breakpoint(large) {
+		font-size: 40px;
+	}
+}
+
 .fz-18 {
   font-size: 18px;
 }

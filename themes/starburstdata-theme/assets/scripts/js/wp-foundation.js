@@ -41,25 +41,27 @@ jQuery(document).ready(function () {
 	});
 
 	// add fixed position to scrolling menu
-	var topPos = jQuery('.page-block--inner-scroll').offset().top;
-	jQuery(window).scroll(function () {
-		var currentScroll = jQuery(window).scrollTop();
-		if (currentScroll >= topPos) {
-			jQuery('.page-block--inner-scroll').addClass('pos-fixed');
-		} else {
-			jQuery('.page-block--inner-scroll').removeClass('pos-fixed');
-		}
-    var scrollPos = $(document).scrollTop();
-		jQuery('#page-scroll a').each(function() {
-			var currLink = jQuery(this);
-			var refElement = $(currLink.attr("href"));
-			if (refElement.position().top <= scrollPos + scrollingMenuHeight && refElement.position().top + Math.ceil(refElement.height()) > scrollPos) {
-				jQuery(this).siblings().each(function () {
-					jQuery(this).removeClass('is-active');
-				})
-				jQuery(this).addClass('is-active');
+	if (jQuery('#page-scroll a').length > 0) {
+		var topPos = jQuery('.page-block--inner-scroll').offset().top;
+		jQuery(window).scroll(function () {
+			var currentScroll = jQuery(window).scrollTop();
+			if (currentScroll >= topPos) {
+				jQuery('.page-block--inner-scroll').addClass('pos-fixed');
+			} else {
+				jQuery('.page-block--inner-scroll').removeClass('pos-fixed');
 			}
+			var scrollPos = $(document).scrollTop();
+			jQuery('#page-scroll a').each(function() {
+				var currLink = jQuery(this);
+				var refElement = $(currLink.attr("href"));
+				if (refElement.position().top <= scrollPos + scrollingMenuHeight && refElement.position().top + Math.ceil(refElement.height()) > scrollPos) {
+					jQuery(this).siblings().each(function () {
+						jQuery(this).removeClass('is-active');
+					})
+					jQuery(this).addClass('is-active');
+				}
+			});
 		});
-	});
+	}
 
 });
