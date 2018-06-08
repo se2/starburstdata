@@ -1,6 +1,6 @@
 <?php
 /**
- * Default single page
+ * Default single post
  *
  * @category   Template
  * @package    WordPress
