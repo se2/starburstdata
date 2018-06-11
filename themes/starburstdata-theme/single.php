@@ -14,7 +14,7 @@ get_header();
 ?>
 
 <div class="bg-cover blog-banner" style="background-image: url('<?php
-										 if (get_field("blog_banner_image")) { 
+										 if (get_field("blog_banner_image")) {
 											 the_field( "blog_banner_image" ); }
 										 else {
 											 the_field("default_banner_image", "option");
@@ -75,7 +75,13 @@ get_header();
 			<div class="cell">
 				<div class="grid-x align-middle archive-popular-container">
 					<div class="archive-popular-thumbnail cell small-3 medium-4">
-						<?php the_post_thumbnail( 'thumbnail' ); ?>
+						<?php
+						if ( has_post_thumbnail( $post->ID ) ) :
+							the_post_thumbnail( 'thumbnail' );
+						else :
+						?>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default.png" alt="">
+						<?php endif; ?>
 					</div>
 
 					<div class="archive-popular-info cell small-9 medium-8">
