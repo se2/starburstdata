@@ -114,7 +114,7 @@ if ( have_rows( 'page_blocks' ) ) :
 							</td>
 							<td class="compare-table__column pos-rel compare-table__presto">
 								<?php if ( $feature['column_1'] ) : ?>
-								<img class="check abs-center" src="/wp-content/uploads/2018/06/check.png" alt="Presto">
+								<img class="check abs-center" src="<?php echo get_template_directory_uri(); ?>/assets/images/check.png" alt="Presto">
 								<?php endif; ?>
 							</td>
 							<td class="compare-table__column pos-rel compare-table__starburst">
