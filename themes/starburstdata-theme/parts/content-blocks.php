@@ -25,7 +25,7 @@ if ( have_rows( 'page_blocks' ) ) :
 			<div class="cell small-12 large-<?php the_sub_field( 'block_grid_width' ); ?>">
 				<div class="page-block--text__content entry-content">
 					<h2 class="text-center light secondary-color"><?php the_sub_field( 'block_title' ); ?></h2>
-					<p class="text-center mb0"><?php the_sub_field( 'block_subtitle' ); ?></p>
+					<p class="text-center mb25"><?php the_sub_field( 'block_subtitle' ); ?></p>
 					<?php the_sub_field( 'block_content' ); ?>
 				</div>
 			</div>
