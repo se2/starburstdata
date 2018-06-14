@@ -100,22 +100,74 @@
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
-        "hide_on_screen": [
-            "the_content"
-        ],
+        "hide_on_screen": "",
         "active": 1,
         "description": ""
     },
     {
-        "key": "group_5b1598770b658",
-        "title": "Blog (Single) – Options",
+        "key": "group_5b1182a0478a2",
+        "title": "Banner Image",
         "fields": [
             {
-                "key": "field_5b159884a4b3f",
-                "label": "Recent Posts Header",
-                "name": "recent_posts_header",
-                "type": "text",
+                "key": "field_5b1182a6a660a",
+                "label": "Banner Image",
+                "name": "blog_banner_image",
+                "type": "image",
                 "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b1ac072ac242",
+        "title": "Blog",
+        "fields": [
+            {
+                "key": "field_5b1ac0776172c",
+                "label": "External URL",
+                "name": "blog_url",
+                "type": "text",
+                "instructions": "If this is an external article, put the URL here. Otherwise, leave blank.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -128,6 +180,74 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
+            },
+            {
+                "key": "field_5b1ac0c06172d",
+                "label": "External Article Excerpt",
+                "name": "blog_external_excerpt",
+                "type": "textarea",
+                "instructions": "Only enter information here if it is an article from an external link.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b1598770b658",
+        "title": "Blog (Single) – Options",
+        "fields": [
+            {
+                "key": "field_5b1a8ffc82ea4",
+                "label": "Default Banner Image",
+                "name": "default_banner_image",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             }
         ],
         "location": [
@@ -204,7 +324,7 @@
                             "id": ""
                         },
                         "post_type": [
-                            "technical-blog"
+                            "post"
                         ],
                         "taxonomy": [],
                         "allow_null": 0,
@@ -213,6 +333,28 @@
                         "ui": 1
                     }
                 ]
+            },
+            {
+                "key": "field_5b2298a124232",
+                "label": "Show \"Popular Posts\" On",
+                "name": "show_popular_posts_on",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "category",
+                "field_type": "checkbox",
+                "allow_null": 0,
+                "add_term": 1,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "id",
+                "multiple": 0
             }
         ],
         "location": [
@@ -232,53 +374,6 @@
         "hide_on_screen": [
             "the_content"
         ],
-        "active": 1,
-        "description": ""
-    },
-    {
-        "key": "group_5b1182a0478a2",
-        "title": "Blog Post",
-        "fields": [
-            {
-                "key": "field_5b1182a6a660a",
-                "label": "Banner Image",
-                "name": "blog_banner_image",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "post"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "acf_after_title",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
         "active": 1,
         "description": ""
     },
