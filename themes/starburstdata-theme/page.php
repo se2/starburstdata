@@ -21,15 +21,11 @@ if ( have_posts() ) :
 
 <div class="grid-container blog-content-container">
 	<div class="grid-x grid-padding-x align-center">
-		<div class="cell medium-10 small-12">
-
+		<div class="cell medium-12 small-12">
 				<!-- Title -->
 				<h1 class="blog-title"><?php the_title(); ?></h1>
-
 				<h4><?php the_field( 'banner_description' ); ?></h4>
-
 				<?php the_content(); ?>
-
 		</div>
 	</div>
 </div>
