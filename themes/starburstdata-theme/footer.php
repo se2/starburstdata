@@ -36,9 +36,6 @@
 
 								<div class="cell small-12 medium-8 large-9">
 									<div class="grid-x small-up-1 medium-up-5">
-										<div class="cell footer-menu">
-											<?php joints_footer_links(); ?>
-										</div>
 										<?php for ($i = 1; $i <= 4 ; $i++): ?>
 										<div id="footer-widget-<?php echo $i; ?>" class="footer-menu cell">
 												<?php if ( is_active_sidebar( 'footer-widget-' . $i ) ) { dynamic_sidebar( 'footer-widget-' . $i ); } ?>

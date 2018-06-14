@@ -90,8 +90,8 @@ for ( $i = 1; $i <= 4 ; $i++ ) {
 	register_sidebar(
 		array(
 			'id' 						=> 'footer-widget-' . $i,
-			'name'          => __( 'Footer column ' . $i, 'leasepilot' ),
-			'description'   => __( 'Drag widgets to this footer container', 'leasepilot' ),
+			'name'          => __( 'Footer column ' . $i, 'starburstdata' ),
+			'description'   => __( 'Drag widgets to this footer container', 'starburstdata' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' 	=> '</aside>',
 			'before_title' 	=> '<h3 class="footer-title">',

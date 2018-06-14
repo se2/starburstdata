@@ -6,6 +6,9 @@ and Foundation play nice together.
 var $ = jQuery;
 
 jQuery(document).ready(function () {
+	// global vars
+	var download_page = '/starburst/download-links/',
+			scrollingMenuHeight = 50;
 
 	// Remove empty P tags created by WP inside of Accordion and Orbit
 	jQuery('.accordion p:empty, .orbit p:empty').remove();
@@ -29,8 +32,6 @@ jQuery(document).ready(function () {
 		jQuery(this).addClass('is-active');
 	});
 
-	var scrollingMenuHeight = 50;
-
 	// smoothscroll init
 	var scroll = new SmoothScroll('a[href*="#"]', {
 		speed: 1000,
@@ -51,7 +52,7 @@ jQuery(document).ready(function () {
 				jQuery('.page-block--inner-scroll').removeClass('pos-fixed');
 			}
 			var scrollPos = $(document).scrollTop();
-			jQuery('#page-scroll a').each(function() {
+			jQuery('#page-scroll a').each(function () {
 				var currLink = jQuery(this);
 				var refElement = $(currLink.attr("href"));
 				if (refElement.position().top <= scrollPos + scrollingMenuHeight && refElement.position().top + Math.ceil(refElement.height()) > scrollPos) {
@@ -65,13 +66,21 @@ jQuery(document).ready(function () {
 	}
 
 	// multistep form behavior
-	$('.js-button-next').on('click', function() {
+	$('.js-button-next').on('click', function () {
 		$(this).parent().parent().addClass('hidden-step').removeClass('current-step');
 		$(this).parent().parent().next().removeClass('hidden-step').addClass('current-step');
 	});
-	$('.js-button-prev').on('click', function() {
+	$('.js-button-prev').on('click', function () {
 		$(this).parent().parent().addClass('hidden-step').removeClass('current-step');
 		$(this).parent().parent().prev().removeClass('hidden-step').addClass('current-step');
 	});
 
+	document.addEventListener('wpcf7mailsent', function (event) {
+		if ("wpcf7-f4-o1" == event.detail.id) { // Change 123 to the ID of the form
+			$('#try-presto h2').html('Thanks for your submission');
+			$('#try-presto .wpcf7-form.sent').append('<div class="text-center mt30"><a href="' + download_page + '" class="button">Proceed to Download</a></div>');
+		}
+	}, false);
+
 });
+

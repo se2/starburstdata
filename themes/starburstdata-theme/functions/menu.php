@@ -13,8 +13,8 @@
 // Register menus.
 register_nav_menus(
 	array(
-		'main-nav'     => __( 'The Main Menu', 'jointswp' ),
-		'footer-links' => __( 'Footer Links', 'jointswp' ),
+		'main-nav'     => __( 'The Main Menu' ),
+		// 'footer-links' => __( 'Footer Links' ),
 	)
 );
 
@@ -37,11 +37,12 @@ function joints_top_nav() {
  * Add a popup trigger for main nav
 */
 function add_popup_trigger( $items, $args ) {
+	// var_dump($args->menu);
 	if ( 'main-nav' === $args->theme_location ) {
 		$items .= '<li class="button tiny menu-button"><a href="#" data-open="try-presto">Try Presto</a></li>';
 	}
-	if ( 'footer-links' === $args->theme_location ) {
-		$items = '<li class="menu-item menu-item--popup"><a class="bold primary-color no-outline" href="#" data-open="try-presto">Try Presto</a></li>' . $items;
+	if ( 29 === $args->menu->term_id ) {
+		$items = '<li class="menu-item menu-item--popup"><a class="bold primary-color no-outline" href="#!" data-open="try-presto">Try Presto</a></li>' . $items;
 	}
 	return $items;
 }
@@ -86,15 +87,16 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 /**
  * The Footer Menu.
  */
-function joints_footer_links() {
-	wp_nav_menu(array(
-		'container'      => 'false',
-		'menu_class'     => 'menu',
-		'theme_location' => 'footer-links',
-		'depth'          => 0,
-		'fallback_cb'    => '',
-	));
-} /* End Footer Menu */
+// function joints_footer_links() {
+// 	wp_nav_menu(array(
+// 		'container'      => 'false',
+// 		'menu_class'     => 'menu',
+// 		'theme_location' => 'footer-links',
+// 		'depth'          => 0,
+// 		'fallback_cb'    => '',
+// 	));
+// }
+/* End Footer Menu */
 
 /**
  * Header Fallback Menu.

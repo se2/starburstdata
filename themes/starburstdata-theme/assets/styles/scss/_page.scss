@@ -94,11 +94,13 @@
     &--left {
       img.overlap-img {
 				@include breakpoint(large) {
-					right: auto;
-					left: calc((#{$global-width} - 100vw) / 2);
+          left: auto;
+          right: calc(50% + #{map-get($map: $grid-column-gutter, $key: large)});
+					// right: auto;
+					// left: calc((#{$global-width} - 100vw) / 2);
 				}
-				@include breakpoint(1680px) {
-					left: auto;
+				@include breakpoint(xlarge) {
+					// left: auto;
 					right: calc(58.333333% + #{map-get($map: $grid-column-gutter, $key: large)});
 				}
       }

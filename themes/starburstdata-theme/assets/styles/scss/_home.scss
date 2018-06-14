@@ -9,27 +9,36 @@
 		background: none;
 	}
 	@include breakpoint(medium) {
-		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 392px);
+		min-height: 435px;
+		height: 442px;
+		// height: calc(100vh - #{$announcement-height} - #{$nav-height} - 392px);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center right;
 	}
 	@include breakpoint(large) {
-		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px - 90px);
+		// height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px - 90px);
 	}
 	@include breakpoint(xlarge) {
-		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 125px - 8px - 50px);
+		min-height: 490px;
+		height: calc(100vh - #{$announcement-height} - #{$nav-height} - 125px - 8px - 50px);
 	}
 	@include breakpoint(xxlarge) {
-		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px);
+		min-height: 600px;
+		height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px);
 	}
 	@include breakpoint(wide) {
-		min-height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px - 90px);
+		height: calc(100vh - #{$announcement-height} - #{$nav-height} - 317px - 90px);
 	}
 	h1 {
 		@include breakpoint(medium) {
 			font-size: rem-calc(38px);
 		}
+	}
+	img.hide-for-medium {
+		width: 150%;
+		max-width: none;
+		margin-left: -25%;
 	}
 }
 

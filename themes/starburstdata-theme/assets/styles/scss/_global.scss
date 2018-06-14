@@ -415,6 +415,11 @@ $margin: 20;
   }
 }
 
+.post-password-form input[type=submit] {
+  @extend .button;
+  color: get-color(primary);
+}
+
 .banner-button {
   border: #00a7b5;
 }
