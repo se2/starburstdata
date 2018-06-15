@@ -39,7 +39,7 @@ function joints_top_nav() {
 function add_popup_trigger( $items, $args ) {
 	// var_dump($args->menu);
 	if ( 'main-nav' === $args->theme_location ) {
-		$items .= '<li class="button tiny menu-button"><a href="#" data-open="try-presto">Try Presto</a></li>';
+		$items .= '<li class="button tiny menu-button"><a href="#!" data-open="try-presto">Try Presto</a></li>';
 	}
 	if ( 29 === $args->menu->term_id ) {
 		$items = '<li class="menu-item menu-item--popup"><a class="bold primary-color no-outline" href="#!" data-open="try-presto">Try Presto</a></li>' . $items;
