@@ -5,13 +5,12 @@
 ?>
 
 <?php
-$news_cat       = 25;
-$press_releases = 30;
+$press_release  = 'Press Release';
+$press_releases = get_field( 'press_releases_category', 'option' ) ? get_field( 'press_releases_category', 'option' ) : 33;
 $cat_name       = '';
 foreach( ( get_the_category() ) as $childcat ) {
-	// if ( cat_is_ancestor_of( $news_cat, $childcat ) ) {
 	if ( $childcat->cat_ID === $press_releases ) {
-		$cat_name = 'Press Release';
+		$cat_name = $press_release;
 	}
 }
 ?>

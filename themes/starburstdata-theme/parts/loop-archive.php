@@ -29,13 +29,10 @@
 		<?php } ?>
 
 		<!-- Excerpt -->
-		<?php if (get_field('blog_external_excerpt')) { ?>
-			<p class="archive-excerpt"><?php the_field('blog_external_excerpt'); ?></p>
-		<?php } else { ?>
-			<p class="archive-excerpt"><?php the_excerpt(); } ?></p>
+		<p class="archive-excerpt"><?php the_excerpt(); ?></p>
 
-		<?php if (get_field('blog_url')) { ?>
-			<a href="<?php the_field('blog_url'); ?>" target="_blank">Read&nbsp;More&nbsp;&raquo;</a>
+		<?php if ( get_field( 'blog_url' ) ) { ?>
+			<a href="<?php the_field( 'blog_url' ); ?>" target="_blank">Read&nbsp;More&nbsp;&raquo;</a>
 		<?php } else { ?>
 			<a href="<?php the_permalink(); ?>">Read&nbsp;More&nbsp;&raquo;</a>
 		<?php } ?>
