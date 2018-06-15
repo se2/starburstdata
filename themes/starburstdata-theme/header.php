@@ -28,6 +28,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
 
+		<!-- Google verification -->
+		<meta name=“google-site-verification” content=“Q3V4T3_gxzeJjwGjzOPZcjaG_CqMUoSXx39V9Re-ssE” />
+
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 		<!-- Icons & Favicons -->
