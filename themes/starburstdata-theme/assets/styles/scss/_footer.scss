@@ -20,8 +20,8 @@
     li {
       display: block;
       a {
-        font-size: 17px;
-        color: $light-gray;
+        font-size: 14px;
+        color: $black;
       }
     }
     li.menu-item-has-children {
@@ -42,7 +42,7 @@
       margin: 0;
       padding: 0;
       li a {
-        color: $light-gray;
+        color: $black;
         font-size: 14px;
         line-height: 1.3;
       }
