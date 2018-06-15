@@ -1,9 +1,8 @@
 "https://www.starburstdata.com/aws/","/presto-aws/"
 "https://www.starburstdata.com/presto-managed-services/",""/our-offerings/presto-managed-service/
-"https://www.starburstdata.com/news/","/category/news/"
-"https://www.starburstdata.com/press/","/category/news/press-releases/"
+"https://www.starburstdata.com/news/","/category/news/press-releases/"
+"https://www.starburstdata.com/press/","/category/news/"
 "https://www.starburstdata.com/technical-blog/","/category/technical-blog/"
-"https://www.starburstdata.com/careers/","/hiring/"
 "https://www.starburstdata.com/download","/download-starburst-enterprise-distribution-of-presto/"
 "https://www.starburstdata.com/about-presto","/learn-presto/"
 "https://www.starburstdata.com/support","https://support.starburstdata.com/"
