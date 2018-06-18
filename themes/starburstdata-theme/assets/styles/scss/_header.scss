@@ -109,11 +109,19 @@
 .top-bar .top-bar-left {
   position: absolute;
   left: 0;
+  @include breakpoint(medium) {
+    position: relative;
+    left: auto;
+  }
 }
 
 .top-bar .top-bar-right {
   position: absolute;
   right: 0;
+  @include breakpoint(medium) {
+    position: relative;
+    right: auto;
+  }
 }
 
 // Form
