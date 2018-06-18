@@ -19,6 +19,9 @@
 	<html class="no-js"  <?php language_attributes(); ?>>
 
 	<head>
+
+		<meta name="google-site-verification" content="Q3V4T3_gxzeJjwGjzOPZcjaG_CqMUoSXx39V9Re-ssE" />
+
 		<meta charset="utf-8">
 
 		<!-- Force IE to use the latest rendering engine available -->
@@ -29,7 +32,7 @@
 		<meta class="foundation-mq">
 
 		<!-- Google verification -->
-		<meta name=“google-site-verification” content=“Q3V4T3_gxzeJjwGjzOPZcjaG_CqMUoSXx39V9Re-ssE” />
+		<!-- <meta name=“google-site-verification” content=“Q3V4T3_gxzeJjwGjzOPZcjaG_CqMUoSXx39V9Re-ssE” /> -->
 
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
