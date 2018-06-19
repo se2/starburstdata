@@ -215,6 +215,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5b2903cca1f56",
+            "label": "CTA Button Form?",
+            "name": "footer_cta_button_form",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5b193748a4e7d",
             "label": "Footer CTA Button Link",
             "name": "footer_cta_button_link",
@@ -227,6 +246,11 @@
                         "field": "field_5b19317ecdee2",
                         "operator": "==",
                         "value": "1"
+                    },
+                    {
+                        "field": "field_5b2903cca1f56",
+                        "operator": "!=",
+                        "value": "1"
                     }
                 ]
             ],
@@ -236,6 +260,38 @@
                 "id": ""
             },
             "return_format": "url"
+        },
+        {
+            "key": "field_5b2903efa1f58",
+            "label": "Form Shortcode",
+            "name": "footer_cta_button_shortcode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b19317ecdee2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5b2903cca1f56",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -257,5 +313,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1528383595
+    "modified": 1529414729
 }

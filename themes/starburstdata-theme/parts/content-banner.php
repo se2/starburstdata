@@ -23,8 +23,12 @@ $title = get_field( 'banner_headline' ) ? get_field( 'banner_headline' ) : get_t
 			<div class="interior-banner__content cell large-8 text-center">
 				<h1><?php echo esc_html( $title ); ?></h1>
 				<h4><?php the_field( 'banner_description' ); ?></h4>
+				<?php if ( get_field( 'cta_button_form' ) ) : ?>
+				<a class="button large" href="#!" data-open="try-presto" aria-controls="try-presto" aria-haspopup="true" tabindex="0"><?php the_field( 'cta_button_title' ); ?></a>
+				<?php else : ?>
 				<?php if ( get_field( 'cta_button_title' ) && get_field( 'cta_button_link' ) ) : ?>
 				<a class="button large" href="<?php the_field( 'cta_button_link' ); ?>" target="_blank"><?php the_field( 'cta_button_title' ); ?></a>
+				<?php endif; ?>
 				<?php endif; ?>
 			</div>
 		</div>

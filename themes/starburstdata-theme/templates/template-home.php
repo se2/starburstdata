@@ -52,7 +52,11 @@ if ( have_posts() ) :
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="cell">
+				<?php if ( get_field( 'cta_button_form' ) ) : ?>
+				<a class="button reverse" href="#!" data-open="try-presto" aria-controls="try-presto" aria-haspopup="true" tabindex="0"><?php the_field( 'home_cta_text' ); ?></a>
+				<?php else : ?>
 				<a class="button reverse" href="<?php the_field( 'home_cta_link' ); ?>" target="_blank"><?php the_field( 'home_cta_text' ); ?></a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

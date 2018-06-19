@@ -17,7 +17,8 @@
 <div class="reveal" id="try-presto" data-reveal data-animation-in="ease-in">
 	<h2 class="light primary-color text-center fz-40 mb20">Try Presto Today!</h2>
 	<div class="form form--multistep">
-		<?php echo do_shortcode( '[contact-form-7 id="4"]' ); ?>
+		<?php $popup_form = get_field( 'cta_button_shortcode' ) ? get_field( 'cta_button_shortcode' ) : '[contact-form-7 id="4"]'; ?>
+		<?php echo do_shortcode( $popup_form ); ?>
 	</div>
 	<button class="close-button" data-close aria-label="Close modal" type="button">
 		<span aria-hidden="true">x</span>

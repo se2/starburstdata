@@ -20,7 +20,11 @@
 			<div class="cell small-12 large-6 text-center">
 				<h1 class="white-color lh1 mb10"><?php the_field( 'footer_cta_title' ); ?></h1>
 				<h5 style="color:#90dce2;" class="mb20"><?php the_field( 'footer_cta_subtitle' ); ?></h5>
+				<?php if ( get_field( 'cta_button_form' ) ) : ?>
+				<a class="button fill" href="#!" data-open="try-presto" aria-controls="try-presto" aria-haspopup="true" tabindex="0"><?php the_field( 'footer_cta_button_title' ); ?></a>
+				<?php else : ?>
 				<a href="<?php the_field( 'footer_cta_button_link' ) ?>" class="button fill"><?php the_field( 'footer_cta_button_title' ); ?></a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
