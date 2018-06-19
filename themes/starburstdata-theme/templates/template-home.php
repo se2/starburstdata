@@ -16,7 +16,7 @@ if ( have_posts() ) :
 		the_post();
 ?>
 
-<div class="bg-contain bg-center-right home-banner pos-rel" style="background-image: url(<?php the_field( 'home_banner_image' ); ?>;">
+<div class="bg-contain bg-center-right home-banner pos-rel" style="background-image:url('<?php the_field( 'home_banner_image' ); ?>');">
 	<div class="grid-container">
 		<div class="grid-x">
 			<div class="home-banner-container cell small-12 medium-6">
