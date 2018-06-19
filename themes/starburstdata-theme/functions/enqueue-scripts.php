@@ -10,6 +10,7 @@ function site_scripts() {
 
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/styles/style.css', array(), filemtime(get_template_directory() . '/assets/styles/scss'), 'all' );
+    wp_enqueue_style( 'ios8-css', get_template_directory_uri() . '/assets/styles/ios8.css', array(), filemtime(get_template_directory() . '/assets/styles/scss'), 'all' );
 
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {

@@ -9,7 +9,8 @@
 
 // Main menu styling
 .menu {
-  align-items: center;
+	align-items: center;
+	-webkit-align-items: center;
   a {
     transition: color $global-transition;
     font-weight: 500;

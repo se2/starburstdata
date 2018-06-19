@@ -4,7 +4,8 @@
     color: $light-gray;
   }
   &__wrapper {
-    align-items: center;
+		align-items: center;
+		-webkit-align-items: center;
 		padding: rem-calc(40px) 0;
 		min-height: 250px;
 		@include breakpoint(medium) {
@@ -58,10 +59,13 @@
     }
   }
   &--overlap-img {
-    display: flex;
+		display: flex;
+		display: -webkit-flex;
     width: 100%;
-    align-items: flex-end;
-    justify-content: center;
+		align-items: flex-end;
+		-webkit-align-items: flex-end;
+		justify-content: center;
+		-webkit-justify-content: center;
     p {
       text-align: justify;
     }
@@ -72,7 +76,8 @@
 			@include breakpoint(large) {
 				padding: rem-calc(60px) 0 rem-calc(70px);
 			}
-      align-items: center;
+			align-items: center;
+			-webkit-align-items: center;
     }
     img.overlap-img {
 			@include breakpoint(large) {
@@ -145,7 +150,8 @@
   }
   &--cta {
     .grid-x {
-      align-items: center;
+			align-items: center;
+			-webkit-align-items: center;
 			padding: $mobile-padding 0;
 			@include breakpoint(medium) {
 				padding: 50px 0;
@@ -157,8 +163,10 @@
     position: absolute;
     min-height: 50px;
     line-height: 1;
-    display: flex;
-    align-items: center;
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		-webkit-align-items: center;
     width: 100%;
     &.pos-fixed {
       position: fixed;
