@@ -121,3 +121,12 @@ function the_title_trim( $title ) {
 	return $title;
 }
 add_filter('the_title', 'the_title_trim');
+
+/**
+ * Remove "Protected" or "Private" string from titleRemove Read More Links from all excerpts
+ */
+function custom_excerpt_more( $more ) {
+	return '…';
+}
+
+add_filter( 'excerpt_more', 'custom_excerpt_more', 11 );
