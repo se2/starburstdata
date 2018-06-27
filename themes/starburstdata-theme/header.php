@@ -101,7 +101,7 @@
 					<div class="container text-center">
 						<p class="light white-color">
 							<?php the_field( 'announcement', 'option' ); ?>
-							<a class="bold" href="<?php the_field( 'announcement_cta_link' ); ?>"><?php the_field( 'announcement_cta_title', 'option' ); ?></a>
+							<a class="bold" href="<?php the_field( 'announcement_cta_link', 'option' ); ?>"><?php the_field( 'announcement_cta_title', 'option' ); ?></a>
 						</p>
 					</div>
 				</div>
