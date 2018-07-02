@@ -7,7 +7,7 @@ var $ = jQuery;
 
 jQuery(document).ready(function () {
 	// global vars
-	var download_page = '/starburst/?p=579',
+	var download_page = $('#try-presto').data('download'),
 			scrollingMenuHeight = 50;
 
 	// Remove empty P tags created by WP inside of Accordion and Orbit

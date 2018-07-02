@@ -14,7 +14,7 @@
 
 <!-- Known issue if using data-animation-out -->
 <!-- https://github.com/zurb/foundation-sites/issues/10626 -->
-<div class="reveal" id="try-presto" data-reveal data-animation-in="ease-in">
+<div class="reveal" id="try-presto" data-reveal data-animation-in="ease-in" data-download="<?php echo ( get_field( 'download_page', 'option' ) ) ? get_field( 'download_page', 'option' ) : '/'; ?>">
 	<h2 class="light primary-color text-center fz-40 mb20">Try Presto Today!</h2>
 	<div class="form form--multistep">
 		<?php $popup_form = get_field( 'cta_button_shortcode' ) ? get_field( 'cta_button_shortcode' ) : '[contact-form-7 id="4"]'; ?>
