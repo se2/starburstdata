@@ -30,6 +30,8 @@ if ( have_posts() ) :
 	</div>
 </div>
 
+<?php get_template_part( 'parts/content', 'intro' ); ?>
+
 <?php get_template_part( 'parts/content', 'blocks' ); ?>
 
 <?php get_template_part( 'parts/content', 'footer' ); ?>

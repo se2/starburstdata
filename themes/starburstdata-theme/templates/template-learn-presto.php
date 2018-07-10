@@ -19,6 +19,8 @@ if ( have_posts() ) :
 
 <?php get_template_part( 'parts/content', 'banner' ); ?>
 
+<?php get_template_part( 'parts/content', 'intro' ); ?>
+
 <?php get_template_part( 'parts/content', 'blocks' ); ?>
 
 <?php get_template_part( 'parts/content', 'footer' ); ?>

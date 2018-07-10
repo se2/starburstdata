@@ -19,6 +19,8 @@ if ( have_posts() ) :
 
 <?php get_template_part( 'parts/content', 'banner' ); ?>
 
+<?php get_template_part( 'parts/content', 'intro' ); ?>
+
 <div class="grid-container main-container text-center">
 	<div class="grid-x grid-padding-x align-center">
 		<div class="cell medium-10 small-12">
