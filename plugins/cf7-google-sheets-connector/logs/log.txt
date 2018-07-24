@@ -1,0 +1,62 @@
+29 June 2018 10:56:25 	 PHP 7.0.29Array
+(
+    [date] => June 29, 2018
+    [time] => 10:56 am
+    [serial-number] => 
+    [remote-ip] => 73.60.212.135
+    [user-agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36
+    [url] => https://www.starburstdata.com/our-offerings/
+    [post-id] => 
+    [post-name] => 
+    [post-title] => 
+    [post-url] => 
+    [post-author] => 
+    [post-author-email] => 
+    [site-title] => Starburst Data
+    [site-description] => Enterprise Ready Presto
+    [site-url] => https://www.starburstdata.com
+    [site-admin-email] => dan@delindesign.com
+    [user-login] => 
+    [user-email] => 
+    [user-url] => 
+    [user-first-name] => 
+    [user-last-name] => 
+    [user-nickname] => 
+    [user-display-name] => 
+    [menu-role] => IT Professional
+    [menu-environment] => Commodity / On Premises
+    [menu-data-amount] => Up to 1TB
+    [menu-migration] => Hive
+    [menu-production] => ASAP
+    [message] => Eric Testing
+    [first-name] => Eric
+    [last-name] => Whitlow
+    [business-email] => eric@starburstdata.com
+    [your-phone] => 7203199962
+    [company] => Eric Testing
+    [country] => USA
+    [ERROR_MSG] => Error in Google Request
+    [TRACE_STK] => #0 /home/starbu10/public_html/wp-content/plugins/cf7-google-sheets-connector/lib/asimlqt/php-google-spreadsheet-client/src/Google/Spreadsheet/DefaultServiceRequest.php(146): Google\Spreadsheet\DefaultServiceRequest->execute(Resource id #507)
+#1 /home/starbu10/public_html/wp-content/plugins/cf7-google-sheets-connector/lib/asimlqt/php-google-spreadsheet-client/src/Google/Spreadsheet/ListFeed.php(78): Google\Spreadsheet\DefaultServiceRequest->post('https://spreads...', '<entry xmlns="h...')
+#2 /home/starbu10/public_html/wp-content/plugins/cf7-google-sheets-connector/lib/google-sheets.php(80): Google\Spreadsheet\ListFeed->insert(Array)
+#3 /home/starbu10/public_html/wp-content/plugins/cf7-google-sheets-connector/includes/class-gs-service.php(150): CF7GSC_googlesheet->add_row(Array)
+#4 /home/starbu10/public_html/wp-includes/class-wp-hook.php(286): Gs_Connector_Service->cf7_save_to_google_sheets(Object(WPCF7_ContactForm))
+#5 /home/starbu10/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#6 /home/starbu10/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /home/starbu10/public_html/wp-content/plugins/contact-form-7/includes/submission.php(204): do_action('wpcf7_mail_sent', Object(WPCF7_ContactForm))
+#8 /home/starbu10/public_html/wp-content/plugins/contact-form-7/includes/submission.php(33): WPCF7_Submission->submit()
+#9 /home/starbu10/public_html/wp-content/plugins/contact-form-7/includes/contact-form.php(716): WPCF7_Submission::get_instance(Object(WPCF7_ContactForm), Array)
+#10 /home/starbu10/public_html/wp-content/plugins/contact-form-7/includes/rest-api.php(280): WPCF7_ContactForm->submit()
+#11 /home/starbu10/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): wpcf7_rest_create_feedback(Object(WP_REST_Request))
+#12 /home/starbu10/public_html/wp-includes/rest-api/class-wp-rest-server.php(321): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#13 /home/starbu10/public_html/wp-includes/rest-api.php(266): WP_REST_Server->serve_request('/contact-form-7...')
+#14 /home/starbu10/public_html/wp-includes/class-wp-hook.php(286): rest_api_loaded(Object(WP))
+#15 /home/starbu10/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#16 /home/starbu10/public_html/wp-includes/plugin.php(515): WP_Hook->do_action(Array)
+#17 /home/starbu10/public_html/wp-includes/class-wp.php(373): do_action_ref_array('parse_request', Array)
+#18 /home/starbu10/public_html/wp-includes/class-wp.php(713): WP->parse_request('')
+#19 /home/starbu10/public_html/wp-includes/functions.php(960): WP->main('')
+#20 /home/starbu10/public_html/wp-blog-header.php(16): wp()
+#21 /home/starbu10/public_html/index.php(17): require('/home/starbu10/...')
+#22 {main}
+)
